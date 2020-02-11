@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="893.0" prefWidth="1238.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="WeatherStationController">
+   <children>
+      <ChoiceBox fx:id="parameterChoiceBox" layoutX="51.0" layoutY="167.0" prefWidth="150.0" AnchorPane.bottomAnchor="701.0" AnchorPane.leftAnchor="51.0" AnchorPane.rightAnchor="1037.0" AnchorPane.topAnchor="167.0" />
+      <BarChart fx:id="barChart" layoutX="335.0" layoutY="3.0" prefHeight="514.0" prefWidth="897.0" title="Jakość powietrza " AnchorPane.bottomAnchor="376.0" AnchorPane.leftAnchor="335.0" AnchorPane.rightAnchor="6.0" AnchorPane.topAnchor="3.0">
+          <xAxis>
+              <CategoryAxis side="BOTTOM" tickLabelFill="GREEN" fx:id="xAxis" />
+          </xAxis>
+          <yAxis>
+              <NumberAxis fx:id="yAxis" side="LEFT" tickLabelFill="GREEN" />
+          </yAxis>
+         <effect>
+            <Glow />
+         </effect>
+      </BarChart>
+      <TextField fx:id="miastoTextView" layoutX="51.0" layoutY="71.0" promptText="Miasto" AnchorPane.bottomAnchor="797.0" AnchorPane.leftAnchor="51.0" AnchorPane.rightAnchor="1038.0" AnchorPane.topAnchor="71.0" />
+      <Button fx:id="wczytajBtn" layoutX="198.0" layoutY="804.0" mnemonicParsing="false" onAction="#wczytajClicked" text="Wczytaj" AnchorPane.bottomAnchor="64.0" AnchorPane.leftAnchor="198.0" AnchorPane.rightAnchor="982.0" AnchorPane.topAnchor="804.0" />
+      <Button fx:id="wyswietlBtn" layoutX="85.0" layoutY="215.0" mnemonicParsing="false" onAction="#wyswietlClicked" text="Wyświetl" AnchorPane.bottomAnchor="653.0" AnchorPane.leftAnchor="85.0" AnchorPane.rightAnchor="1090.0" AnchorPane.topAnchor="215.0" />
+      <Button fx:id="zapiszBtn" layoutX="59.0" layoutY="804.0" mnemonicParsing="false" onAction="#zapiszClicked" text="Zapisz" AnchorPane.bottomAnchor="64.0" AnchorPane.leftAnchor="59.0" AnchorPane.rightAnchor="1127.0" AnchorPane.topAnchor="804.0" />
+      <ImageView fx:id="obrazJakosciPowietrza" fitHeight="364.0" fitWidth="897.0" layoutX="335.0" layoutY="550.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="7.778289794921875" AnchorPane.leftAnchor="335.0" AnchorPane.rightAnchor="6.0" AnchorPane.topAnchor="550.0">
+         <image>
+            <Image url="@../pic/1187.png" />
+         </image>
+      </ImageView>
+      <DatePicker fx:id="dataDatePicker" layoutX="50.0" layoutY="113.0" promptText="Data pomiaru" AnchorPane.bottomAnchor="755.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="1014.0" AnchorPane.topAnchor="113.0" />
+      <HBox fx:id="hBox" layoutY="258.0" prefHeight="465.0" prefWidth="317.0" AnchorPane.bottomAnchor="170.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="921.0" AnchorPane.topAnchor="258.0">
+         <children>
+            <VBox fx:id="infoVBox" prefHeight="465.0" prefWidth="155.0" />
+            <VBox fx:id="resultsVBox" prefHeight="465.0" prefWidth="162.0" />
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

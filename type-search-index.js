@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes","url":"allclasses-index.html"},{"p":"<Unnamed>","l":"CoordinatesMeasurement"},{"p":"<Unnamed>","l":"DateMeasurement"},{"p":"<Unnamed>","l":"JsonConnect"},{"p":"<Unnamed>","l":"Measurement"},{"p":"<Unnamed>","l":"WeatherStationController"},{"p":"<Unnamed>","l":"WeatherStationWindow"}]
